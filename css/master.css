@@ -1,5 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400..700;1,400..700&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Outfit:wght@100..900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
-
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Lora:ital,wght@0,400..700;1,400..700&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Outfit:wght@100..900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
 * {
     box-sizing: border-box;
     margin: 0;
@@ -11,7 +10,7 @@
 html, body {
     margin: 0;
     padding: 0;
-    font-family: 'Roboto';
+    font-family: 'Inter';
     background: #F2F2F2;
 }
 
@@ -77,6 +76,7 @@ section {
 .balance-user span {
     font-size: 14px;
     color: #000000;
+    font-weight: 500;
 }
 
 .total-balance_buttons {
@@ -97,6 +97,7 @@ section {
     font-size: 13px;
     text-wrap: nowrap;
     color: #000000;
+    font-weight: 500;
 }
 
 .total-balance {
@@ -112,6 +113,7 @@ section {
     gap: 4px;
     font-size: 12px;
     color: #464a57;
+    font-weight: 500;
 }
 
 .total-balance span svg {
@@ -145,10 +147,12 @@ section {
     color: #464a57;
     font-size: 13px;
     cursor: pointer;
+    font-weight: 500;
+    font-family: 'Inter';
 }
 
 .category-button.active {
     background-color: #EBEBEB;
     color: #000000;
-    font-weight: 600;
+    font-weight: 700;
 }
