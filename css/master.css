@@ -1,4 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Lora:ital,wght@0,400..700;1,400..700&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Outfit:wght@100..900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+
 * {
     box-sizing: border-box;
     margin: 0;
@@ -7,7 +8,8 @@
     --page-padding: 8px;
 }
 
-html, body {
+html,
+body {
     margin: 0;
     padding: 0;
     font-family: 'Inter';
@@ -40,9 +42,7 @@ section {
     margin: 8px 8px 0 8px;
 }
 
-.round-button.light {
-    background-color: #ffffff;
-    border: 2px solid #F0F0F0;
+.round-button {
     width: 56px;
     aspect-ratio: 1/1;
     border-radius: 50px;
@@ -52,17 +52,23 @@ section {
     cursor: pointer;
 }
 
+.round-button.light {
+    background-color: #ffffff;
+    border: 2px solid #F0F0F0;
+}
+
 .balance-header .round-button.light svg {
     width: 28px;
     height: 28px;
 }
 
-.round-button.light svg {
+.round-button svg {
     width: 24px;
     height: 24px;
     fill: #000000;
 }
-.round-button.light img {
+
+.round-button img {
     width: 48px;
     aspect-ratio: 1/1;
 }
@@ -144,7 +150,7 @@ section {
     border: none;
     background-color: inherit;
     border-radius: 12px;
-    color: #464a57;
+    color: #86888e;
     font-size: 13px;
     cursor: pointer;
     font-weight: 500;
@@ -155,4 +161,166 @@ section {
     background-color: #EBEBEB;
     color: #000000;
     font-weight: 700;
+}
+
+.crypto-prices_container {
+    margin-top: 8px;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    overflow: clip;
+    width: 100%;
+    gap: 8px;
+}
+
+.crypto-price_card {
+    width: 100%;
+    height: fit-content;
+    background-color: #ffffff;
+    border-radius: 32px;
+    display: flex;
+    flex-direction: column;
+}
+
+.crypto-logo {
+    width: 56px;
+    aspect-ratio: 1/1;
+    border-radius: 50px;
+    margin: 8px 8px 32px 8px;
+}
+
+.crypto-balance {
+    margin: 0 16px;
+    font-size: 20px;
+    font-weight: 500;
+    color: #000000;
+}
+
+.crypto-price {
+    margin: 8px 16px 16px 16px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.dollar-price {
+    /* color: #a2a4aa; */
+    color: #86888e;
+    font-size: 12px;
+    font-weight: 500;
+}
+
+.percent {
+    color: #29cf9d;
+    font-size: 12px;
+    font-weight: 500;
+}
+
+.recent-transactions {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 56px;
+}
+
+.recent-transactions_title {
+    font-size: 14px;
+    margin: 24px 16px 0 16px;
+    font-weight: 500;
+}
+
+.recent-transactions_container {
+    margin-top: 12px;
+    background-color: #ffffff;
+    width: 100%;
+    padding: 8px;
+    border-radius: 50px;
+    display: flex;
+    align-items: center;
+}
+
+.round-button.grey {
+    background-color: #EBEBEB;
+}
+
+.transaction-info {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-left: 8px;
+    width: 100%;
+}
+
+.transaction-info div {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+}
+
+.transaction-title {
+    font-size: 14px;
+    font-weight: 500;
+    color: #000000;
+}
+
+.transaction-data {
+    color:#86888e;
+    font-size: 11px;
+    font-weight: 500;
+}
+
+.transaction-amount {
+    color: #29cf9d;
+    font-weight: 500;
+    font-size: 14px;
+    margin-right: 8px;
+}
+
+footer {
+    background-color: #f2f2f2;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    max-width: 900px;
+    padding: 4px 0 24px 0;
+
+    margin: 0 auto;
+    left: 0;
+    right: 0;
+
+}
+
+.footer-menu {
+    display: flex;
+    gap: 40px;
+    justify-content: center;
+}
+
+.footer-menu button {
+    border: none;
+    background: none;
+    cursor: pointer;
+    padding: 8px;
+}
+
+.menu-button {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 4px;
+    color: #86888e;
+    font-size: 11px;
+    font-weight: 500;
+    font-family: 'Inter';
+}
+
+.menu-button.active {
+    color: #000000;
+}
+
+.menu-button svg {
+    width: 24px;
+    height: 24px;
+    fill: #86888e;
+}
+
+.menu-button.active svg {
+    fill:#000000;
 }
