@@ -180,7 +180,7 @@
                 <div class="containers">
                     <div class="crypto-exchange_container">
                         <div class="crypto-exchange_header">
-                            <div>
+                            <div class="exchange-crypto">
                                 <img class="crypto-logo" src="img/ethereum.png">
                                 <button class="select-currency">ETH
                                     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256">
@@ -190,9 +190,12 @@
                                     </svg>
                                 </button>
                             </div>
-                            <span class="exchange-status">Send</span>
+                            <div class="status">
+                                <span class="exchange-status small">Send</span>
+                                <span class="exchange-status green small">Max</span>
+                            </div>
                         </div>
-                        <span class="exchange-amount">0,6948</span>
+                        <input type="number" class="exchange-amount"></input>
                         <span class="exchange-balance"><span class="colortext">Balance: </span>0,6948 ETH</span>
                     </div>
                     <button class="round-button grey"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256">
@@ -202,7 +205,7 @@
                         </svg></button>
                     <div class="crypto-exchange_container">
                         <div class="crypto-exchange_header">
-                            <div>
+                            <div class="exchange-crypto">
                                 <img class="crypto-logo" src="img/usd.png">
                                 <button class="select-currency">USD
                                     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256">
@@ -212,9 +215,12 @@
                                     </svg>
                                 </button>
                             </div>
-                            <span class="exchange-status">Receive</span>
+                            <div class="status">
+                                <span class="exchange-status large">Receive</span>
+                                <span class="exchange-status green small">Max</span>
+                            </div>
                         </div>
-                        <span class="exchange-amount">1 801,73</span>
+                        <input type="number" class="exchange-amount"></input>
                         <span class="exchange-balance"><span class="colortext">Balance: </span>100,95 USD</span>
                     </div>
                 </div>
