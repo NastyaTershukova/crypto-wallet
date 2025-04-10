@@ -22,7 +22,25 @@ body {
 }
 
 section {
-    padding: 48px var(--page-padding) 0 var(--page-padding);
+    display: flex;
+    flex-direction: column;
+    padding: var(--page-padding);
+    position: absolute;
+    top: 0;
+    left: 0;
+    opacity: 0;
+    pointer-events: none;
+    /* transform: translateX(100%);*/
+    /* transition: .5s ease-in-out; */
+    transition-property: opacity;
+    width: 100%;
+    /* height: 100dvh; */
+    overflow: clip;
+}
+
+section.active {
+    pointer-events: all;
+    opacity: 1;
 }
 
 .total-balance_container {
@@ -54,7 +72,8 @@ section {
 
 .round-button.light {
     background-color: #ffffff;
-    border: 2px solid #F0F0F0;
+    /* border: 2px solid #F0F0F0; */
+    border: 2px solid rgba(0,0,0,0.05);
 }
 
 .balance-header .round-button.light svg {
@@ -97,9 +116,10 @@ section {
     flex-direction: column;
     gap: 12px;
     align-items: center;
-}
-
-.total-balance_buttons span {
+    background: none;
+    border: none;
+    cursor: pointer;
+    font-family: 'Inter';
     font-size: 13px;
     text-wrap: nowrap;
     color: #000000;
@@ -217,7 +237,7 @@ section {
 .recent-transactions {
     display: flex;
     flex-direction: column;
-    /* margin-bottom: 56px; */
+    /* margin-bottom: 80px; */
 }
 
 .recent-transactions_title {
@@ -312,16 +332,18 @@ footer {
     font-size: 11px;
     font-weight: 500;
     font-family: 'Inter';
+    transition: .5s ease-out;  
 }
 
 .menu-button.active {
-    color: #000000;
+    color: #000000;  
 }
 
 .menu-button svg {
     width: 24px;
     height: 24px;
     fill: #86888e;
+    transition: .5s ease-out;
 }
 
 .menu-button.active svg {
@@ -406,7 +428,8 @@ header {
 
 .exchange-status {
     color: #86888e;
-    border: 2px solid #F2F2F2;
+    /* border: 2px solid #F2F2F2; */
+    border: 2px solid rgba(0,0,0,0.05);
     padding: 8px 12px;
     border-radius: 24px;
     font-size: 14px;
@@ -457,7 +480,7 @@ header {
 .exchange-info {
     display: flex;
     flex-direction: column;
-    border: 2px solid rgb(219, 219, 219);
+    border: 2px solid rgba(0,0,0,0.1);
     background-color: #F2F2F2;
     padding: 16px;
     border-radius: 32px;
@@ -521,6 +544,7 @@ header {
     min-height: 100vh;
     padding-left: 16px;
     padding-right: 16px;
+    margin-top: 8px;
 }
 
 .cards-container {
