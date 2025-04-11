@@ -9,7 +9,7 @@
 
 <body>
     <div class="page-content">
-        <section class="main-page active">
+        <section class="main-page">
             <div class="total-balance_container">
                 <div class="balance-header">
                     <div class="balance-user">
@@ -123,7 +123,7 @@
                 </div>
             </div>
         </section>
-        <!-- <section class="exchange-page">
+        <section class="exchange-page active">
             <header>
                 <button onclick="previousScreen()" class="round-button light"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256">
                         <path
@@ -151,7 +151,7 @@
                                 <span class="exchange-status green small">Max</span>
                             </div>
                         </div>
-                        <input type="number" class="exchange-amount"></input>
+                        <input type="number" placeholder="0" class="exchange-amount"></input>
                         <span class="exchange-balance"><span class="colortext">Balance: </span>0,6948 ETH</span>
                     </div>
                     <button class="round-button grey"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256">
@@ -176,7 +176,7 @@
                                 <span class="exchange-status green small">Max</span>
                             </div>
                         </div>
-                        <input type="number" class="exchange-amount"></input>
+                        <input type="number" placeholder="0" class="exchange-amount"></input>
                         <span class="exchange-balance"><span class="colortext">Balance: </span>100,95 USD</span>
                     </div>
                 </div>
@@ -196,7 +196,7 @@
                     </div>
                 </div>
             </div>
-        </section> -->
+        </section>
         <section class="card-page">
             <header class="page-header">
                 <span class="section-title">Cards</span>
@@ -347,10 +347,10 @@
                 </button>
             </div>
         </section>
-        <section>хуй</section>
+        <section class="savings-page">хуй</section>
         <footer>
             <div class="footer-menu">
-                <button>
+                <button onclick="handleScreenSwitch(this, 'main-page')">
                     <div class="menu-button active">
                         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256">
                             <path
@@ -360,7 +360,7 @@
                         Dashboard
                     </div>
                 </button>
-                <button>
+                <button onclick="handleScreenSwitch(this, 'card-page')">
                     <div class="menu-button">
                         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256">
                             <path
@@ -370,7 +370,7 @@
                         Cards
                     </div>
                 </button>
-                <button>
+                <button onclick="handleScreenSwitch(this, 'account-page')">
                     <div class="menu-button">
                         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256">
                             <path
@@ -380,7 +380,7 @@
                         Account
                     </div>
                 </button>
-                <button>
+                <button onclick="handleScreenSwitch(this, 'savings-page')">
                     <div class="menu-button">
                         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256">
                             <path

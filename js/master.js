@@ -1,21 +1,24 @@
 let screens = document.querySelectorAll('section');
 let currentScreen = 0;
 
-function showScreen(value) {
+// function showScreen(value) { говно
+//     if (document.querySelector('section.active')) {
+//         document.querySelector('section.active').classList.remove('active');
+//     }
+//     screens[value].classList.add('active');
+// }
+
+function showScreen(screenName) {
     if (document.querySelector('section.active')) {
         document.querySelector('section.active').classList.remove('active');
     }
-    screens[value].classList.add('active');
-    
+    document.querySelector(`section.${screenName}`).classList.add('active');
 }
 
-let footerButtons = document.querySelectorAll('.menu-button');
-for (let i = 0; i < footerButtons.length; i++) {
-    footerButtons[i].addEventListener('click', function () {
-        showScreen(i);
-        for (let k = 0; k < footerButtons.length; k++) {
-            footerButtons[k].classList.remove('active');
-        }
-          footerButtons[i].classList.add('active');
-    });
+function handleScreenSwitch(button, screenName) {
+    showScreen(screenName);
+    if (document.querySelector('.menu-button.active')) {
+        document.querySelector('.menu-button.active').classList.remove('active');
+    }
+    button.querySelector('div').classList.add('active');
 }
